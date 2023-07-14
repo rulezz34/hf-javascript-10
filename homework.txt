@@ -1,0 +1,44 @@
+1. Írj egy Person class-t, melynek a konstruktora fogadjon egy nevet és egy születési dátumot.
+Írj egy statikus metódust, ami visszaadja azon személyek számát, akik elmúltak 20 évesek.
+Protip: amikor létrehozzuk az adott személyt, akkor növelj egy változót
+
+2. Adott egy 4 elemű weights tömb ['light', 'normal', 'heavy', 'extra heavy']
+Készíts egy `move` függvényt, ami visszaad egy promise-t.
+Véletlenszerűen válassz ki a weights elemei közül egyet.
+Ha a 'light' volt az, akkor 3 mp múlva a promise resolve-oljon a 'light' értékkel.
+Ha 'normal' volt, akkor 4 mp múlva a promise resolve-oljon 'normal' értékkel.
+Ha 'heavy' volt, akkor 5 mp múlva a promise resolve-oljon 'heavy' értékkel.
+Ha 'extra heavy', akkor 6mp múlva a Promise !! reject !! -elődjön egy error-ral,
+aminek az üzenete legyen a "Too Heavy"
+protip: használj setTimeout-ot 
+
+3. Készíts egy  getRandomPromise függvényt, ami visszaad egy Promise-t,
+ami 2 mp múlva randomra resolve-olódik, vagy reject-elődik
+Készíts egy html fájlt, amiben van egy 60x60px div, kezdetben szürke színnel.
+Ha rákattintasz a div-re, akkor a színe legyen fekete, illetve hívd meg a getRandomPromise-t és ha
+resolve-olódik, akkor a div színe váltson zöldre,
+reject esetén pedig pirosra.
+Ha ismét rákattintasz, akkor ismét fusson le ez a mechanizmus.
+
+function getRandomPromise
+
+
+4. Készíts egy html-t, melyben van egy <textarea> és egy gomb,
+továbbá hivatkozzuk be a notifications.js fájlt.
+Ha a gombot lenyomjuk, akkor próbáljuk meg a textarea-ban lévő szöveget JSON-ként értelmezni,
+és hívjuk meg rajta a JSON.parse metódust.
+1. Abban az esetben, ha nem sikerül, úgy a notifications.js-ben lévő showNotification-t hívjuk meg:
+    "Hibás JSON: " + a parse által adott hiba szövege - error típusú legyen - és maradjon default idő
+2. Abban az esetben, ha sikerül úgy a notifications.js-ben lévő showNotification-t hívjuk meg
+    "Helyes JSON" - ne legyen error típusú - és maradjon default idő
+protip: nézz bele a call-notifications-example.js-be hogyan lehet használni
+
+5. Készíts egy html fájlt, amibe van egy label, egy input és egy gomb.
+Ha a gombot lenyomjuk, és az input-ban lévő szöveg hossza kevesebb mint 3 karakter,
+akkor dobj egy hibát ezzel a szöveggel: "Too short text"
+
+6. Írj egy sleep függvényt, amely paraméterül kap egy 'milliseconds' számot, és visszaad egy promise-t,
+ami a paraméterül kapott 'milliseconds'-nyi ezredmásodperc után resolve-olódik.
+
+7. Készíts egy html-t, melybe az elején írd bele, hogy "loading". Majd futtasd le az előzőleg megírt
+sleep függvényt 5000-es értékkel, és miután resolve-olódott, írd felül a szöveget "ready"-re.
